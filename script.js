@@ -58,7 +58,12 @@ $('[data-fancybox="gallery"]').fancybox({
     //"download",
     //"thumbs",
     "close"
-]
+    ],
+    slideShow: {
+        autoStart: false,
+        speed: 4000,
+      },
+    
 });
 
 

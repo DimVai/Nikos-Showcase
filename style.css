@@ -1,6 +1,7 @@
-body{
+html, body{
     background-color: lightsteelblue;
-    padding: 1rem;
+    padding: 0rem;
+	margin: 0;
 }
 
 .header{
@@ -24,15 +25,15 @@ body{
 	align-items: center;		
 }
 .gallery-grid{
-	/* max-width: 100%; */
+	max-width: 100%;
 	display: grid;
 	gap: var(--galleryItemsGap, 2vw);
-	grid-template-columns: repeat(auto-fit, minmax(var(--galleryItemMinWidth, 300px), 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(min(var(--galleryItemMinWidth, 300px),100%), 1fr));
 	justify-content: center;   
 	justify-items: center;	  
 }
-.gallery-grid > * {
-	max-width: var(--galleryItemMaxWidth, 1920px);
+.gallery-grid > * {	
+	max-width: min(var(--galleryItemMaxWidth, 1920px),100%);
 }
 .gallery-grid img{
 	max-width: 100%;
