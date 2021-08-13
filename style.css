@@ -1,0 +1,40 @@
+body{
+    background-color: lightsteelblue;
+    padding: 1rem;
+}
+
+.header{
+    color: lavender;
+}
+
+.text-nowrap {
+    white-space: nowrap !important;
+}
+
+.center{    
+	display: block;	
+	margin-left: auto;
+	margin-right: auto;		
+	text-align: center;		
+  }
+.center-contents{
+	display: flex;
+	flex-direction: column;	 	
+	justify-content: center; 	
+	align-items: center;		
+}
+.gallery-grid{
+	/* max-width: 100%; */
+	display: grid;
+	gap: var(--galleryItemsGap, 2vw);
+	grid-template-columns: repeat(auto-fit, minmax(var(--galleryItemMinWidth, 300px), 1fr));
+	justify-content: center;   
+	justify-items: center;	  
+}
+.gallery-grid > * {
+	max-width: var(--galleryItemMaxWidth, 1920px);
+}
+.gallery-grid img{
+	max-width: 100%;
+	height: auto;
+}
