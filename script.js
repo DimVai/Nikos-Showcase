@@ -36,7 +36,7 @@ let photoNames = [
 /** The innerText of #showcase */
 var showCaseContent = '';
 
-// For every photo name, make a a-img fancybox component
+// For every photo name, make a a-img fancybox component and add it to showCaseContent
 (() =>{
     photoNames.forEach(name => {
         let imgSrc = `photos/${name}.jpeg`;
@@ -63,7 +63,6 @@ $('[data-fancybox="gallery"]').fancybox({
         autoStart: false,
         speed: 4000,
       },
-    
 });
 
 
